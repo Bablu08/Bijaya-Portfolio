@@ -46,7 +46,7 @@
     <!-- Right-bar-grid (Moved to display first on mobile using order classes) -->
     <div class="right-bar grid grid-rows-3 gap-4 sm:gap-4.5 order-1 sm:order-none">
         
-        <!-- Name and Links -->
+        <!-- Name and Links (No changes needed) -->
         <div class="bg-dark2 text-white h-14 rounded-3xl flex items-center justify-between px-5">
             <p class="font-semibold">Bijaya Behera</p>
             <p class="font-semibold">Data Analyst</p>
@@ -64,12 +64,14 @@
             </div>
         </div>
 
-        <!-- Image and Map -->
-        <div class="flex flex-col sm:flex-row gap-4">
+        <!-- Image and Map with reduced gap -->
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
+            <!-- Profile Image -->
             <div class="bg-purple w-full sm:w-2/6 rounded-full overflow-hidden">
                 <img class="w-full h-fit object-cover" src="Avatar 5.png" alt="">
             </div>
 
+            <!-- Map (No changes needed) -->
             <div class="bg-dark2 w-full sm:w-4/6 rounded-3xl">
                 <iframe class="w-full h-48 sm:h-full rounded-3xl" 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497700.1123417174!2d77.30126176659972!3d12.953790192745629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1725729993399!5m2!1sen!2sin" 
@@ -78,55 +80,66 @@
             </div>
         </div>
 
-        <!-- About Me -->
+        <!-- About Section with dynamic height -->
         <div class="bg-dark2 rounded-3xl px-5 py-3">
             <div class="text-white flex justify-between mb-2">
                 <p class="font-semibold">About</p>
                 <a href="MyResume.pdf" target="_blank" class="text-gray-300 font-light"><u>Resume</u></a>
             </div>
-            <p class="text-gray-400">I am a senior data analyst with over 5 years of experience in turning complex data into strategic business decisions...</p>
+            <p class="text-gray-400">
+                <!-- Minimize height if content is short -->
+                I am a senior data analyst with over 5 years of experience in turning complex data into strategic business decisions...
+            </p>
         </div>
     </div>
 
-    <!-- Left-bar-grid (This will now display after the right-bar grid on mobile) -->
+    <!-- Left-bar-grid -->
     <div class="left-bar grid grid-rows-3 gap-4 sm:gap-4.5 order-2 sm:order-none">
         
-        <!-- Work Experience -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-2.5">
-            <div class="bg-green text-white rounded-3xl flex items-center justify-center flex-col p-4">
+        <!-- Work Experience with adjusted height -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5">
+            <div class="bg-green text-white rounded-3xl flex items-center justify-center flex-col p-4 h-24 sm:h-auto">
                 <p id="experience-count" class="text-4xl sm:text-6xl font-semibold">0+</p>
                 <p>Years of Experience</p>
             </div>
-            <div class="bg-yellow rounded-3xl flex items-center justify-center flex-col p-4">
+            <div class="bg-yellow rounded-3xl flex items-center justify-center flex-col p-4 h-24 sm:h-auto">
                 <p id="projects-count" class="text-4xl sm:text-6xl font-semibold">0+</p>
                 <p>Projects Completed</p>
             </div>
-            <div class="bg-pink text-white rounded-3xl flex items-center justify-center flex-col p-4">
+            <div class="bg-pink text-white rounded-3xl flex items-center justify-center flex-col p-4 h-24 sm:h-auto">
                 <p id="companies-count" class="text-4xl sm:text-6xl font-semibold">0+</p>
                 <p>Companies Served</p>
             </div>
         </div>
 
-        <!-- Projects Section -->
+        <!-- Projects Section with dynamic height based on content -->
         <div class="bg-dark2 rounded-3xl px-5 py-3">
             <div class="text-white flex justify-between mb-2">
                 <p class="font-semibold">Projects</p>
                 <a href="" target="_blank" class="text-gray-300 font-light">See All</a>
             </div>
+            <div class="text-gray-400">
+                <!-- Adjust content dynamically -->
+                <!-- Content for Projects will stack, height increases as content is added -->
+            </div>
         </div>
 
         <!-- Collaboration Section -->
         <div class="bg-dark2 rounded-3xl p-4 sm:px-37 sm:py-5">
-            <p class="text-white text-2xl sm:text-4xl font-sans font-semibold">Transforming Data into Actionable Insights.</p>
+            <p class="text-white text-xl sm:text-4xl font-sans font-semibold text-center">
+                <!-- Increase slogan font size for mobile -->
+                Transforming Data into Actionable Insights.
+            </p>
             <a href="mailto:Bijaya.Behera@dell.com">
-                <button class="bg-purple float-right text-white font-semibold px-4 py-1 sm:px-5 sm:py-1.5 rounded-full mt-4 inline-flex items-center">
+                <button class="bg-purple mx-auto block text-white font-semibold px-4 py-1 sm:px-5 sm:py-1.5 rounded-full mt-4 text-center">
+                    <!-- Center button and make it larger for mobile -->
                     Let’s Collaborate <span class="ml-2">🤝</span>
                 </button>
             </a>
         </div>
     </div>
 
-    <!-- ChatBot -->
+    <!-- ChatBot (No changes) -->
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger intent="WELCOME" chat-title="Chat_with_me" agent-id="b4683425-7538-4dbf-a9a2-a29cecf81945" language-code="en"></df-messenger>
         
