@@ -26,8 +26,21 @@
      
     <!-- Style sheet -->
      <link rel="stylesheet" href="style.css">
+     <style>
+        /* Fading out the preloader */
+        .fade-out {
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+        }
+      </style>
 </head>
 <body class="w-screen h-screen bg-dark1 grid grid-cols-2 gap-4.5 px-37 py-30">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-black text-white text-2xl z-50">
+        <div id="loading-text">0%</div>
+    </div>
 
     <!-- Left-bar-grid -->
     <div class="left-bar grid grid-rows-3 gap-4.5">
@@ -149,6 +162,27 @@
     animateCounter('experience-count', 0, 3, 2000);  // From 0 to 3+ (Years of Experience)
     animateCounter('projects-count', 0, 40, 2000);   // From 0 to 40+ (Projects Completed)
     animateCounter('companies-count', 0, 14, 2000);  // From 0 to 14+ (Companies Served)
+
+
+// JavaScript to handle the preloader animation
+    document.addEventListener("DOMContentLoaded", function() {
+      let preloader = document.getElementById("preloader");
+      let loadingText = document.getElementById("loading-text");
+      let portfolioContent = document.getElementById("portfolio-content");
+      let loadProgress = 0;
+
+      // Simulate loading progress from 0 to 100%
+      let interval = setInterval(function() {
+        if (loadProgress < 100) {
+          loadProgress++;
+          loadingText.innerHTML = loadProgress + "%";
+        } else {
+          clearInterval(interval);
+          preloader.classList.add('fade-out');
+          portfolioContent.classList.remove('hidden');
+        }
+      }, 5);  // Adjust the speed of the loading progress
+    });
     </script>
 </body>
 </html>
