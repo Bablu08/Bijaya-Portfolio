@@ -35,114 +35,114 @@
         }
       </style>
 </head>
-
-    <body class="w-screen h-screen bg-dark1 grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 sm:px-37 py-4 sm:py-30">
+<body class="w-screen h-screen bg-dark1 grid grid-cols-2 gap-4.5 px-37 py-30">
 
     <!-- Preloader -->
     <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-black text-white text-2xl z-50">
         <div id="loading-text">0%</div>
     </div>
 
-    <!-- Right-bar-grid (Moved to display first on mobile using order classes) -->
-    <div class="right-bar grid grid-rows-3 gap-4 sm:gap-4.5 order-1 sm:order-none">
-        
-        <!-- Name and Links (No changes needed) -->
-        <div class="bg-dark2 text-white h-14 rounded-3xl flex items-center justify-between px-5">
-            <p class="font-semibold">Bijaya Behera</p>
-            <p class="font-semibold">Data Analyst</p>
-            <div class="logo-website flex gap-2">
-                <div class="bg-dark3 rounded-full overflow-hidden border border-gray-300 w-10 h-10">
-                    <a href="https://www.linkedin.com/in/bijaya-behera-38377b134/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/LinkedIn_icon_circle.svg" alt="LinkedIn" class="w-full h-full object-cover">
-                    </a>
-                </div>
-                <div class="bg-dark3 rounded-full overflow-hidden border border-gray-300 w-10 h-10">
-                    <a href="https://facebook.com" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="w-full h-full object-cover">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Image and Map with reduced gap -->
-        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
-            <!-- Profile Image -->
-            <div class="bg-purple w-full sm:w-2/6 rounded-full overflow-hidden">
-                <img class="w-full h-fit object-cover" src="Avatar 5.png" alt="">
-            </div>
-
-            <!-- Map (No changes needed) -->
-            <div class="bg-dark2 w-full sm:w-4/6 rounded-3xl">
-                <iframe class="w-full h-48 sm:h-full rounded-3xl" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497700.1123417174!2d77.30126176659972!3d12.953790192745629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1725729993399!5m2!1sen!2sin" 
-                    frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
-            </div>
-        </div>
-
-        <!-- About Section with dynamic height -->
-        <div class="bg-dark2 rounded-3xl px-5 py-3">
-            <div class="text-white flex justify-between mb-2">
-                <p class="font-semibold">About</p>
-                <a href="MyResume.pdf" target="_blank" class="text-gray-300 font-light"><u>Resume</u></a>
-            </div>
-            <p class="text-gray-400">
-                <!-- Minimize height if content is short -->
-                I am a senior data analyst with over 5 years of experience in turning complex data into strategic business decisions...
-            </p>
-        </div>
-    </div>
-
     <!-- Left-bar-grid -->
-    <div class="left-bar grid grid-rows-3 gap-4 sm:gap-4.5 order-2 sm:order-none">
-        
-        <!-- Work Experience with adjusted height -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5">
-            <div class="bg-green text-white rounded-3xl flex items-center justify-center flex-col p-4 h-24 sm:h-auto">
-                <p id="experience-count" class="text-4xl sm:text-6xl font-semibold">0+</p>
+    <div class="left-bar grid grid-rows-3 gap-4.5">
+
+        <div class="bg-dark2 rounded-3xl">
+            <p class="text-white text-4xl font-sans font-semibold px-37 py-5">Transforming Data into Actionable Insights.</p>
+            <a href="mailto:Bijaya.Behera@dell.com">
+                <button class="bg-purple float-right text-white font-semibold px-5 py-1.5 mr-6 rounded-full mt-4 inline-flex items-center">
+                    Let’s Collaborate <span class="ml-2">🤝</span>
+                </button>
+            </a>
+        </div>
+        <div class="grid grid-cols-3 gap-2.5">
+            <div class="bg-green text-white rounded-3xl flex items-center justify-center flex-col">
+                <p id="experience-count" class="text-6xl font-semibold">0+</p>
                 <p>Years of Experience</p>
             </div>
-            <div class="bg-yellow rounded-3xl flex items-center justify-center flex-col p-4 h-24 sm:h-auto">
-                <p id="projects-count" class="text-4xl sm:text-6xl font-semibold">0+</p>
+            <div class="bg-yellow rounded-3xl flex items-center justify-center flex-col">
+                <p id="projects-count" class="text-6xl font-semibold">0+</p>
                 <p>Projects Completed</p>
             </div>
-            <div class="bg-pink text-white rounded-3xl flex items-center justify-center flex-col p-4 h-24 sm:h-auto">
-                <p id="companies-count" class="text-4xl sm:text-6xl font-semibold">0+</p>
+            <div class="bg-pink text-white rounded-3xl flex items-center justify-center flex-col">
+                <p id="companies-count" class="text-6xl font-semibold">0+</p>
                 <p>Companies Served</p>
             </div>
         </div>
 
-        <!-- Projects Section with dynamic height based on content -->
         <div class="bg-dark2 rounded-3xl px-5 py-3">
             <div class="text-white flex justify-between mb-2">
                 <p class="font-semibold">Projects</p>
                 <a href="" target="_blank" class="text-gray-300 font-light">See All</a>
             </div>
-            <div class="text-gray-400">
-                <!-- Adjust content dynamically -->
-                <!-- Content for Projects will stack, height increases as content is added -->
-            </div>
-        </div>
-
-        <!-- Collaboration Section -->
-        <div class="bg-dark2 rounded-3xl p-4 sm:px-37 sm:py-5">
-            <p class="text-white text-xl sm:text-4xl font-sans font-semibold text-center">
-                <!-- Increase slogan font size for mobile -->
-                Transforming Data into Actionable Insights.
-            </p>
-            <a href="mailto:Bijaya.Behera@dell.com">
-                <button class="bg-purple mx-auto block text-white font-semibold px-4 py-1 sm:px-5 sm:py-1.5 rounded-full mt-4 text-center">
-                    <!-- Center button and make it larger for mobile -->
-                    Let’s Collaborate <span class="ml-2">🤝</span>
-                </button>
-            </a>
         </div>
     </div>
 
-    <!-- ChatBot (No changes) -->
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger intent="WELCOME" chat-title="Chat_with_me" agent-id="b4683425-7538-4dbf-a9a2-a29cecf81945" language-code="en"></df-messenger>
+    <!-- rite-bar-frid -->
+    <div class="rite-bar grid grid-rows-3 gap-4.5">
+
+        <!--  -->
+        <div class="flex flex-row gap-4">
+            <!--  -->
+            <div class="bg-purple w-2/6 rounded-full overflow-hidden">
+                <img class="w-full h-fit object-cover"
+                 src="Avatar 5.png" alt=""
+                >
+            </div>
+            <!--  -->
+            <div class="bg-dark2 w-4/6 rounded-3xl">
+                <iframe 
+                    class="w-full h-full rounded-3xl" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497700.1123417174!2d77.30126176659972!3d12.953790192745629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1725729993399!5m2!1sen!2sin" 
+                    frameborder="0" 
+                    style="border:0" 
+                    allowfullscreen="" 
+                    aria-hidden="false" 
+                    tabindex="0">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="bg-dark2 text-white h-14 rounded-3xl flex items-center justify-between px-5">
+            <p class="font-semibold">Bijaya Behera</p>
+            <p class="font-semibold">DataAnalyst</p>
+            <div class="logo-website flex gap-2">
+                <div class="bg-dark3 rounded-full verflow-hidden border border-gray-300 w-10 h-10">
+                    <a href="https://www.linkedin.com/in/bijaya-behera-38377b134/" target="_blank" class="transition-transform duration-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/LinkedIn_icon_circle.svg" alt="LinkedIn" class="w-full h-full object-cover ">
+                    </a>
+                </div>
+                <!-- <div class="bg-dark3 rounded-full verflow-hidden border border-gray-300 w-10 h-10">
+                    <a href="https://instagram.com" target="_blank" class="transition-transform duration-300">
+                        <img src="https://cdn-icons-png.flaticon.com/512/11023/11023876.png" alt="GitHub" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                </div> -->
+                <div class="bg-dark3 rounded-full verflow-hidden border border-gray-300 w-10 h-10">
+                    <a href="https://facebook.com" target="_blank" class="transition-transform duration-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="w-full h-full object-cover">
+                    </a>
+                </div>
+            </div>
+        </div>
         
+        <div class="bg-dark2 rounded-3xl px-5 py-3">
+            <div class="text-white flex justify-between mb-2">
+                <p class="font-semibold">About</p>
+                <a href="MyResume.pdf" target="_blank" class="text-gray-300 font-light"><u>Resume</u></a>
+            </div>
+            <p class="text-gray-400">I am a senior data analyst with over 5 years of experience in turning complex data into strategic business decisions. I specialize in data-driven insights, predictive analytics, and designing dashboards that make data accessible to everyone. I have collaborated with a wide range of industries, including finance, retail, and healthcare.</p>
+        </div>
+    </div>
+
+    <!-- ChatBot -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Chat_with_me"
+      agent-id="b4683425-7538-4dbf-a9a2-a29cecf81945"
+      language-code="en"
+    ></df-messenger>
+
+    <!-- script -->
+<!--     <script src="script.js"></script> -->
 <!-- script -->
     <script>
         
