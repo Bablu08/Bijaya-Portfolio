@@ -37,9 +37,9 @@
 <body class="w-screen h-screen bg-dark1 px-18 py-30">
 
     <!-- Preloader -->
-    <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-black text-white text-2xl z-50">
+    <!-- <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-black text-white text-2xl z-50">
         <div id="loading-text">0%</div>
-    </div>
+    </div> -->
     
     <!-- top-Bar -->
     <div class="bg-dark2 text-white h-14 rounded-3xl flex items-center justify-between px-5">
@@ -63,9 +63,11 @@
     <div class="bg-dark2 text-white flex flex-col items-center rounded-3xl pt-5 pb-9">
         <p class="font-semibold text-xl">About Me</p>
         <p class="text-gray-400 text-center mt-4 p-5">I am a senior data analyst with over 5 years of experience in turning complex data into strategic business decisions. I specialize in data-driven insights, predictive analytics, and designing dashboards that make data accessible to everyone. I have collaborated with a wide range of industries, including finance, retail, and healthcare.</p>
-        <button class="px-6 py-2 rounded-full border-2 bg-dark4 border-custom-gray text-white hover:bg-white hover:text-black transition-all duration-300" style="background-color: rgba(0, 0, 0, 0.3);">
-            Resume
-          </button>
+        <a href="MyResume.pdf">
+            <button class="px-6 py-2 rounded-full border-2 bg-dark4 border-custom-gray text-white hover:bg-white hover:text-black transition-all duration-300" style="background-color: rgba(0, 0, 0, 0.3);">
+                Resume
+            </button>
+        </a>
     </div>
 
     <!-- experiences -->
@@ -118,6 +120,35 @@
             </button>
         </a>
     </div>
+
+    <div class="  border border-gray-600 mx-1 mt-8"></div>
+
+    <!-- footer -->
+    <footer class="flex items-center justify-between flex-col">
+        <div class="space-x-4 px-3 mt-2 p-3">
+            <!-- Facebook Icon -->
+            <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-gray-400">
+                <i class="fab fa-facebook-f text-2xl"></i>
+            </a>
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-gray-400">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/bijaya-behera-38377b134/" target="_blank" class="text-gray-400 hover:text-gray-400">
+                <i class="fab fa-linkedin-in text-2xl"></i>
+            </a>
+            <!-- GitHub Icon -->
+            <a href="https://www.github.com" target="_blank" class="text-gray-400 hover:text-gray-400">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+        </div>
+        <div class="text-white text-center mb-5">
+            <p class="text-xs">
+              &copy; <span id="year"></span> Bijaya's Portfolio. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
     <!-- year experience -->
      <!-- <div class="bg-dark2 text-white h-auto rounded-3xl flex items-center flex-col pt-20">
@@ -174,7 +205,15 @@
             }
           }, 10);  // Adjust the speed of the loading progress
         });
-        </script>
+
+    // automatically update copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
 
     <!-- script -->
     <!-- <script src="script.js"></script> -->
